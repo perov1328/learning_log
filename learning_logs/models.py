@@ -23,11 +23,11 @@ class Entry(models.Model):
     text = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
-    class Meta:
-        verbose_name_plural = 'entries'
-
     def __str__(self):
         """
         Возвращает строковое представление модели
         """
         return f"{self.text[:50]}..."
+
+    class Meta:
+        verbose_name_plural = 'entries'
